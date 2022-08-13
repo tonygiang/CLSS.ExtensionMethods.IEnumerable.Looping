@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/tonygiang/CLSS.ExtensionMethods.IEnumerable.Looping</RepositoryUrl>
     <PackageTags>CLSS</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.1</Version>
+    <PackageReleaseNotes>- Automatically use the latest CLSS dependency version.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CLSS.ExtensionMethods.IEnumerator.LoopNext" Version="1.0.1" />
+    <PackageReference Include="CLSS.ExtensionMethods.IEnumerator.LoopNext" Version="*" />
   </ItemGroup>
 
 </Project>
