@@ -10,7 +10,7 @@ Looping a collection indefinitely is an operation that maps well to many use cas
 
 `Looping` is an extension method for all [`IEnumerable`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) and [`IEnumerable<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0) types that returns an enumerable that loops infinitely in the forward-moving direction on a collection. The enumerable returned by this method loops infinitely just by calling the standard method `MoveNext`. Therefore, a `foreach` statement of it can also iterate infinitely.
 
-```
+```csharp
 using CLSS;
 
 var numbers = new int[] { 0, 1, 2, 3 };
@@ -23,7 +23,7 @@ foreach (var number in loopingNumbers)
 
 As a result of a never-ending `MoveNext` and the immutability of LINQ methods, controlling where and how much you want to run over a loop can be done as succint as this:
 
-```
+```csharp
 using CLSS;
 using System.Linq;
 
@@ -36,7 +36,7 @@ foreach (var number in numbers.Looping().Skip(1).Take(6))
 
 If a looping enumerable was created out of an empty collection, iterating over it is also no different than iterating an empty collection.
 
-```
+```csharp
 var emptyArr = new int[0];
 foreach (var number in emptyArr.Looping())
 {
